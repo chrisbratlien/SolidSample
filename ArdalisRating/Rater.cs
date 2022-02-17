@@ -2,13 +2,11 @@
 {
     public abstract class Rater
     {
-        protected readonly RatingEngine _engine;
-        protected readonly ConsoleLogger _logger;
+        protected readonly IRatingContext _context;
 
-        public Rater(RatingEngine engine, ConsoleLogger logger)
+        public Rater(IRatingContext context)
         {
-            _engine = engine;
-            _logger = logger;
+            _context = context;
         }
 
         public abstract void Rate(Policy policy);
