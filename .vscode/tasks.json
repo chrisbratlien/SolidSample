@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        { "label": "run xUnit Tests, my friend",
+            "command": "dotnet",
+            "args": [
+                "test"
+            ]
+        },
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ArdalisRating/ArdalisRating.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/ArdalisRating/ArdalisRating.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/ArdalisRating/ArdalisRating.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

@@ -19,6 +19,11 @@ namespace ArdalisRating
         public decimal Valuation { get; set; }
         public decimal BondAmount { get; set; }
         #endregion
+        #region Flood In Addition To Land
+        public int ElevationAboveSeaLevelFeet { get; set; }
+        #endregion
+
+
 
         #region Auto
         public string Make { get; set; }
