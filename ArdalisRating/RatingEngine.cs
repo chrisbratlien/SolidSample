@@ -24,7 +24,7 @@
 
             var rater = Context.CreateRaterForPolicy(policy, Context);
 
-            rater.Rate(policy);
+            rater?.Rate(policy);
 
             Context.Log("Rating completed.");
         }
