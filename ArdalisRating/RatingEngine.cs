@@ -6,11 +6,14 @@
     /// </summary>
     public class RatingEngine
     {
+        private readonly ILogger _logger;
         public IRatingContext Context { get; set; } = new DefaultRatingContext();
         public decimal Rating { get; set; }
-        public RatingEngine()
+
+        public RatingEngine(ILogger logger)
         {
             Context.Engine = this;
+            _logger = logger;
         }
         public void Rate()
         {

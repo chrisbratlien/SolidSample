@@ -18,8 +18,8 @@ namespace ArdalisRating.Tests
             };
             string json = JsonConvert.SerializeObject(policy);
             File.WriteAllText("policy.json", json);
-
-            var engine = new RatingEngine();
+            var logger = new FakeLogger();
+            var engine = new RatingEngine(logger);
             engine.Rate();
             var result = engine.Rating;
 
@@ -37,8 +37,8 @@ namespace ArdalisRating.Tests
             };
             string json = JsonConvert.SerializeObject(policy);
             File.WriteAllText("policy.json", json);
-
-            var engine = new RatingEngine();
+            var logger = new FakeLogger();
+            var engine = new RatingEngine(logger);
             engine.Rate();
             var result = engine.Rating;
 

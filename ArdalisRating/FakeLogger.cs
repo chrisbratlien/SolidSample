@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ArdalisRating.Tests
+namespace ArdalisRating
 {
     public class FakeLogger : ILogger
     {
